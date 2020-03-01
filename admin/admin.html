@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>"WITNER - Admin"</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+</head>
+<body class="m-1 p-1">
+    <div class="header">
+        <div class="row m-1 p-1">
+            <div class="col">
+                <h1>WITNER - Admin</h1>
+            </div>
+            <div class="col text-right">
+                <input type="button" id="signOutBtn" class="btn btn-info" style="display: none;" value="Sign Out" />
+            </div>
+        </div>
+    </div>
+
+    <div id="firebaseui-auth-container" class="text-center align-middle" style="width: 100%; height: 100%"></div>
+
+    <div id="main-container" style="display: none;">
+        <table class="table table-sm table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Attribute</th>
+                    <th class="text-center">Input</th>
+                    <th class="text-center">State</th>
+                    <th class="text-center">Submit</th>
+                    <th class="text-center">Clear</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="align-middle">App Is On</td>
+                    <td class="text-center align-middle"><input type="checkbox" id="isOnInput" /></td>
+                    <td class="text-center align-middle"><input type="checkbox" disabled id="isOn" /></td>
+                    <td class="text-center align-middle"><input type="button" class="btn btn-secondary" id="onOffSubmit" value="Submit" /></td>
+                    <td class="text-center align-middle"><input type="button" class="btn btn-secondary" id="onOffClear" value="Clear" /></td>
+                </tr>
+                <tr>
+                    <td class="align-middle">Tracks</td>
+                    <td class="text-center align-middle"><input type="text" id="tracksInput" /></td>
+                    <td class="text-center align-middle" id="tracks"></td>
+                    <td class="text-center align-middle"><input type="button" class="btn btn-secondary" id="tracksSubmit" value="Submit" /></td>
+                    <td class="text-center align-middle"><input type="button" class="btn btn-secondary" id="tracksClear" value="Clear" /></td>
+                </tr>
+                <tr>
+                    <td>Reply Tracks</td>
+                    <td class="text-center">
+                        <span id="tracks"></span>
+                        <input id="replyTrackText" placeholder="Text" />
+                        <select id="replyTrackPriority"></select>
+                        <select id="replyTrackColor"></select>
+                    </td>
+                    <td class="text-center" id="replyTracks"></td>
+                    <td class="text-center"><input type="button" class="btn btn-secondary" id="replyTracksSubmit" value="Submit" /></td>
+                    <td class="text-center"><input type="button" class="btn btn-secondary" id="replyTracksClear" value="Clear" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+    <script src="../js/admin/admin.js"></script>
+</body>
+</html>

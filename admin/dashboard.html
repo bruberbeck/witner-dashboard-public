@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>tWITter eveNt trackER (WITNER) Dashboard [ADMIN]</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/admin/dashboard.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+  </head>
+  <body>
+	  <div id="mainWindow" class="hidden full-page container-fluid">
+      <div id="row" class="row full-page">
+	       <div id="map" class="col-9"></div>
+         <div id="board" class="col">
+           <div id="toggleWindow" class="board-panel toggle-window container border">
+		        <h6>Reply Tracks</h6>
+	          <div class="h-divider"></div>
+						<div class="btn-toolbar panel-view" role="toolbar">
+							<div class="btn-group mr-2">
+								<input type="button" class="btn btn-sm btn-secondary" id="selectAllTracksBtn" value="Select All">
+								<input type="button" class="btn btn-sm btn-secondary" id="clearAllTracksBtn" value="Clear All">
+							</div>
+						</div>
+                 <ul id="replyTrackCbList" class="list-group panel-view border">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <!-- Default checked -->
+                     <div class="custom-control custom-checkbox">
+                       <input type="checkbox" class="custom-control-input reply-track-checkbox" id="defaultChecked2" checked>
+                       <label class="custom-control-label" for="defaultChecked2">Default checked</label>
+                     </div>
+                    <span class="badge badge-primary badge-pill">14</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <!-- Default checked -->
+                   <div class="custom-control custom-checkbox">
+                     <input type="checkbox" class="custom-control-input reply-track-checkbox" id="defaultChecked3" checked>
+                     <label class="custom-control-label" for="defaultChecked3">Default checked</label>
+                   </div>
+                    <span class="badge badge-primary badge-pill">2</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <!-- Default checked -->
+                     <div class="custom-control custom-checkbox">
+                       <input type="checkbox" class="custom-control-input reply-track-checkbox" id="defaultChecked4" checked>
+                       <label class="custom-control-label" for="defaultChecked4">Default checked</label>
+                     </div>
+                    <span class="badge badge-primary badge-pill">1</span>
+                  </li>
+                 </ul>
+            </div>
+           <div id="eventFlowWindow" class="board-panel event-flow-window container border">
+             <h6>Event Flow</h6>
+             <div class="h-divider"></div>
+             <div id="eventFlowView" class="panel-view"></div>
+           </div>
+         </div>
+      </div>
+    </div>
+    <div id="firebaseui-auth-container" class="text-center align-middle full-page"></div>
+
+	  <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsTFsXmZcpoOjZQjyTs_ULsA86dGdLKn0"></script>
+    <script src="https://cdn.firebase.com/libs/geofire/4.1.0/geofire.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+    <script src="../js/markerclusterer.js"></script>
+    <script src="../js/dashboard-firebaseui.js"></script>
+    <script src="../js/geofire-listener.js"></script>
+    <script src="../js/config-listener.js"></script>
+	  <script src="../js/marker-manager.js"></script>
+    <script defer src="../js/admin/dashboard.js?version=3"></script>
+  </body>
+</html>
